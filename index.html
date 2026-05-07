@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PuloNet Hotspot Premium</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Primbon Weton</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -16,36 +16,47 @@
 
 body{
   font-family:'Poppins',sans-serif;
-  background:
-  radial-gradient(circle at top,#1e3a8a,#020617);
+  background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
   color:white;
   min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
+  overflow-x:hidden;
 }
 
 .container{
-  width:100%;
-  max-width:420px;
+  width:90%;
+  max-width:700px;
+  margin:auto;
+  padding:30px 0;
 }
 
 .card{
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(14px);
+  background:rgba(255,255,255,0.06);
   border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
   border-radius:24px;
-  padding:24px;
-  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+  padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-.brand{
-  font-size:24px;
-  font-weight:700;
+.logo{
+  width:100px;
+  height:100px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#facc15,#f97316,#ef4444);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:42px;
+  box-shadow:0 0 30px rgba(249,115,22,.5);
+}
+
+h1{
   text-align:center;
-  margin-bottom:5px;
-  background:linear-gradient(to right,#38bdf8,#60a5fa,#f59e0b);
+  margin-bottom:10px;
+  font-size:32px;
+  font-weight:700;
+  background:linear-gradient(to right,#facc15,#f97316);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -53,520 +64,371 @@ body{
 .subtitle{
   text-align:center;
   opacity:.8;
-  margin-bottom:20px;
-  font-size:13px;
+  margin-bottom:30px;
 }
 
-form{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
+.input-group{
+  margin-bottom:20px;
+}
+
+label{
+  display:block;
+  margin-bottom:10px;
+  font-weight:600;
 }
 
 input{
   width:100%;
-  height:50px;
+  padding:15px;
   border:none;
   border-radius:14px;
-  padding:0 15px;
-  background:rgba(255,255,255,0.12);
+  outline:none;
+  font-size:16px;
+  background:#1e293b;
   color:white;
-  font-size:15px;
-}
-
-input::placeholder{
-  color:#ddd;
 }
 
 button{
-  height:50px;
+  width:100%;
+  padding:16px;
   border:none;
   border-radius:14px;
+  background:linear-gradient(135deg,#f59e0b,#ef4444);
   color:white;
+  font-size:17px;
   font-weight:700;
   cursor:pointer;
   transition:.3s;
-  font-size:15px;
 }
 
 button:hover{
   transform:scale(1.02);
 }
 
-.login-btn{
-  background:linear-gradient(135deg,#3b82f6,#2563eb);
-}
-
-.menu-btn{
-  display:block;
-  text-align:center;
-  text-decoration:none;
-  padding:14px;
-  border-radius:14px;
-  margin-top:12px;
-  color:white;
-  font-weight:600;
-}
-
-.paket-btn{
-  background:linear-gradient(135deg,#22c55e,#15803d);
-}
-
-.primbon-btn{
-  background:linear-gradient(135deg,#ec4899,#be185d);
-}
-
-.website-btn{
-  background:linear-gradient(135deg,#f59e0b,#d97706);
-}
-
-.footer{
-  margin-top:15px;
-  text-align:center;
-  opacity:.7;
-  font-size:12px;
-}
-
-.hidden{
+.result{
+  margin-top:30px;
   display:none;
-}
-
-.voucher{
-  background:rgba(255,255,255,0.08);
-  border-radius:16px;
-  padding:15px;
-  margin-top:10px;
-}
-
-.buy-btn{
-  width:100%;
-  margin-top:10px;
-  background:linear-gradient(135deg,#f59e0b,#d97706);
-}
-
-.popup{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.85);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:999;
-  padding:15px;
-}
-
-.popup-content{
-  width:100%;
-  max-width:450px;
-  background:#111827;
-  border-radius:24px;
-  padding:25px;
-  max-height:90vh;
-  overflow:auto;
-}
-
-.popup-title{
-  text-align:center;
-  margin-bottom:20px;
-  font-size:22px;
-  color:#facc15;
+  animation:fade .6s ease;
 }
 
 .box{
-  background:rgba(255,255,255,0.06);
-  padding:18px;
+  background:rgba(255,255,255,0.05);
+  padding:20px;
   border-radius:18px;
-  margin-bottom:15px;
+  margin-bottom:18px;
   border-left:4px solid #f59e0b;
 }
 
 .box h3{
-  margin-bottom:8px;
+  margin-bottom:10px;
   color:#facc15;
 }
 
-.close-btn{
-  background:linear-gradient(135deg,#ef4444,#b91c1c);
-  width:100%;
-  margin-top:10px;
+footer{
+  text-align:center;
+  margin-top:35px;
+  opacity:.7;
+  font-size:14px;
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.share-container{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
 }
 
 .share-btn{
+  flex:1;
   background:linear-gradient(135deg,#22c55e,#16a34a);
-  width:100%;
-  margin-top:10px;
+}
+
+.copy-btn{
+  flex:1;
+  background:linear-gradient(135deg,#3b82f6,#2563eb);
+}
+
+.logo-text{
+  text-align:center;
+  margin-bottom:20px;
+  font-size:14px;
+  opacity:.8;
+  letter-spacing:2px;
+}
+
+@media(max-width:600px){
+
+  h1{
+    font-size:26px;
+  }
+
+  .card{
+    padding:22px;
+  }
+
+  .share-container{
+    flex-direction:column;
+  }
 }
 </style>
 </head>
-
 <body>
 
-$(if chap-id)
-<form name="sendin" action="$(link-login-only)" method="post">
-<input type="hidden" name="username"/>
-<input type="hidden" name="password"/>
-<input type="hidden" name="dst" value="$(link-orig)"/>
-<input type="hidden" name="popup" value="true"/>
-</form>
-
-<script src="md5.js"></script>
-
-<script>
-function doLogin(){
-document.sendin.username.value=document.login.username.value;
-document.sendin.password.value=
-hexMD5('$(chap-id)'+document.login.username.value+'$(chap-challenge)');
-document.sendin.submit();
-return false;
-}
-</script>
-$(endif)
-
 <div class="container">
+  <div class="card">
 
-<!-- LOGIN -->
-<div class="card" id="loginBox">
+    <!-- LOGO -->
+    <div class="logo">
+      🔮
+    </div>
 
-<div class="brand">
-PULONET HOTSPOT
-</div>
+    <div class="logo-text">
+      PRIMBON DIGITAL WETON
+    </div>
 
-<div class="subtitle">
-Login Voucher Internet Premium
-</div>
+    <h1>PRIMBON WETON</h1>
 
-<form name="login" action="$(link-login-only)" method="post" onsubmit="return doLogin()">
+    <p class="subtitle">
+      Ramalan weton, karier, keuangan & unsur alam berdasarkan tanggal lahir
+    </p>
 
-<input type="hidden" name="dst" value="$(link-orig)">
-<input type="hidden" name="popup" value="true">
+    <div class="input-group">
+      <label>Masukkan Tanggal Lahir</label>
+      <input type="date" id="tanggalLahir">
+    </div>
 
-<input name="username" type="text" placeholder="Masukkan Voucher..." required>
+    <button onclick="hitungPrimbon()">
+      ✨ Lihat Ramalan
+    </button>
 
-<input name="password" type="hidden">
+    <div class="result" id="hasil">
 
-<button class="login-btn" type="submit">
-🚀 LOGIN INTERNET
-</button>
+      <div class="box">
+        <h3>📅 Hari Lahir</h3>
+        <p id="hari"></p>
+      </div>
 
-</form>
+      <div class="box">
+        <h3>🌙 Weton</h3>
+        <p id="weton"></p>
+      </div>
 
-<a href="#" onclick="showVoucher()" class="menu-btn paket-btn">
-Beli Paket Internet
-</a>
+      <div class="box">
+        <h3>🔥 Unsur Alam</h3>
+        <p id="unsur"></p>
+      </div>
 
-<a href="#" onclick="openPrimbon()" class="menu-btn primbon-btn">
-Primbon Berdasarkan Tanggal Lahir
-</a>
+      <div class="box">
+        <h3>💼 Karier</h3>
+        <p id="karir"></p>
+      </div>
 
-<a href="#" onclick="openWeb()" class="menu-btn website-btn">
-🛒 Jasa Pembuatan Website
-</a>
+      <div class="box">
+        <h3>💰 Nasihat Keuangan</h3>
+        <p id="keuangan"></p>
+      </div>
 
-<div class="footer">
-Support WA : 0895-1323-7203
-</div>
+      <div class="box">
+        <h3>✨ Kepribadian</h3>
+        <p id="sifat"></p>
+      </div>
 
-<div class="footer">
-© PULONET HOTSPOT
-</div>
+      <!-- TOMBOL SHARE -->
+      <div class="share-container">
 
-</div>
+        <button class="share-btn" onclick="shareResult()">
+          📲 Share
+        </button>
 
-<!-- VOUCHER -->
-<div class="card hidden" id="voucherBox">
+        <button class="copy-btn" onclick="copyResult()">
+          📋 Copy
+        </button>
 
-<div class="brand">
-PAKET INTERNET
-</div>
+      </div>
 
-<div class="voucher">
-1 Hari — Rp 3.000
-<button class="buy-btn" onclick="beli('1 Hari')">
-Beli Paket
-</button>
-</div>
+    </div>
 
-<div class="voucher">
-2 Hari — Rp 5.000
-<button class="buy-btn" onclick="beli('2 Hari')">
-Beli Paket
-</button>
-</div>
+    <footer>
+      © 2026 Primbon Weton• OkyWebinger
+    </footer>
 
-<div class="voucher">
-7 Hari — Rp 15.000
-<button class="buy-btn" onclick="beli('7 Hari')">
-Beli Paket
-</button>
-</div>
-
-<div class="voucher">
-30 Hari — Rp 55.000
-<button class="buy-btn" onclick="beli('30 Hari')">
-Beli Paket
-</button>
-</div>
-
-<button class="close-btn" onclick="backLogin()">
-Kembali
-</button>
-
-</div>
-
-</div>
-
-<!-- POPUP -->
-<div class="popup" id="popup">
-
-<div class="popup-content">
-
-<div class="popup-title" id="popupTitle"></div>
-
-<div id="popupBody"></div>
-
-<button class="close-btn" onclick="closePopup()">
-Tutup
-</button>
-
-</div>
-
+  </div>
 </div>
 
 <script>
 
-var username=document.login.username;
-var password=document.login.password;
-
-username.onkeyup=function(){
-password.value=username.value;
-}
-
-function showVoucher(){
-document.getElementById("loginBox").classList.add("hidden");
-document.getElementById("voucherBox").classList.remove("hidden");
-}
-
-function backLogin(){
-document.getElementById("voucherBox").classList.add("hidden");
-document.getElementById("loginBox").classList.remove("hidden");
-}
-
-function beli(paket){
-alert("Hubungi WA 0895-1323-7203 untuk membeli paket "+paket);
-}
-
-function closePopup(){
-document.getElementById("popup").style.display="none";
-}
-
-function openWeb(){
-
-document.getElementById("popup").style.display="flex";
-document.getElementById("popupTitle").innerHTML=
-"🛒 Jasa Website";
-
-document.getElementById("popupBody").innerHTML=`
-
-<div class="box">
-<h3>✔ Website UMKM</h3>
-<p>Website profesional untuk usaha & bisnis.</p>
-</div>
-
-<div class="box">
-<h3>✔ Login Hotspot</h3>
-<p>Custom login hotspot elegan & premium.</p>
-</div>
-
-<div class="box">
-<h3>✔ Website Zodiak & Primbon</h3>
-<p>Web viral siap upload ke internet.</p>
-</div>
-
-<div class="box">
-<h3>📱 Hubungi</h3>
-<p>WA : 0895-1323-7203</p>
-</div>
-
-`;
-
-}
-
-function openPrimbon(){
-
-document.getElementById("popup").style.display="flex";
-
-document.getElementById("popupTitle").innerHTML=
-"Primbon Weton";
-
-document.getElementById("popupBody").innerHTML=`
-
-<div class="box">
-<h3>📅 Masukkan Tanggal Lahir</h3>
-
-<input type="date" id="tanggalLahir"
-style="margin-top:10px">
-
-<button onclick="hitungPrimbon()"
-style="margin-top:12px;
-background:linear-gradient(135deg,#ec4899,#be185d)">
-Lihat Hasil
-</button>
-
-</div>
-
-<div id="hasilPrimbon"></div>
-
-`;
-
-}
-
-const hariList=[
-"Minggu","Senin","Selasa",
-"Rabu","Kamis","Jumat","Sabtu"
+const hariList = [
+  "Minggu",
+  "Senin",
+  "Selasa",
+  "Rabu",
+  "Kamis",
+  "Jumat",
+  "Sabtu"
 ];
 
-const wetonList=[
-"Legi","Pahing","Pon","Wage","Kliwon"
+const wetonList = [
+  "Legi",
+  "Pahing",
+  "Pon",
+  "Wage",
+  "Kliwon"
 ];
 
-const unsurList=[
-{
-nama:"Api",
-sifat:"Berani, kuat dan penuh ambisi."
-},
-{
-nama:"Air",
-sifat:"Tenang, bijaksana dan intuitif."
-},
-{
-nama:"Tanah",
-sifat:"Setia, pekerja keras dan stabil."
-},
-{
-nama:"Angin",
-sifat:"Kreatif, bebas dan cepat berpikir."
-}
+const unsurList = [
+  {
+    nama:"Api",
+    sifat:"Berani, penuh energi, mudah memimpin dan ambisius."
+  },
+  {
+    nama:"Air",
+    sifat:"Tenang, bijaksana, emosional dan mudah memahami orang lain."
+  },
+  {
+    nama:"Tanah",
+    sifat:"Setia, pekerja keras, stabil dan dapat dipercaya."
+  },
+  {
+    nama:"Angin",
+    sifat:"Kreatif, cepat berpikir, suka kebebasan dan mudah beradaptasi."
+  }
 ];
 
-const karirList=[
-"Cocok menjadi pengusaha atau pemimpin.",
-"Berpotensi sukses di bidang teknologi.",
-"Memiliki bakat seni dan kreativitas tinggi.",
-"Cocok menjadi guru atau pembimbing.",
-"Berbakat dalam bisnis dan komunikasi."
+const karirList = [
+  "Cocok menjadi pengusaha, pemimpin, atau pekerjaan kreatif.",
+  "Memiliki potensi besar dalam dunia teknologi dan komunikasi.",
+  "Sangat cocok di bidang seni, desain, dan hiburan.",
+  "Berbakat menjadi guru, motivator, atau pembimbing.",
+  "Memiliki jiwa bisnis dan kemampuan mengatur keuangan."
 ];
 
-const uangList=[
-"Mulailah disiplin menabung sejak dini.",
-"Rezeki datang dari koneksi dan relasi.",
-"Hindari pengeluaran impulsif.",
-"Cocok memiliki usaha sampingan.",
-"Keuangan stabil jika fokus pada tujuan."
+const uangList = [
+  "Hindari pengeluaran impulsif dan mulai belajar investasi.",
+  "Keuangan akan stabil jika disiplin menabung.",
+  "Peluang rezeki datang dari koneksi dan relasi.",
+  "Cocok memiliki usaha sampingan untuk pemasukan tambahan.",
+  "Keberuntungan finansial meningkat saat fokus pada satu tujuan."
 ];
 
 function hitungPrimbon(){
 
-const input=document.getElementById("tanggalLahir").value;
+  const input = document.getElementById("tanggalLahir").value;
 
-if(!input){
-alert("Masukkan tanggal lahir terlebih dahulu");
-return;
+  if(!input){
+    alert("Silakan isi tanggal lahir terlebih dahulu");
+    return;
+  }
+
+  const tgl = new Date(input);
+
+  const hari = hariList[tgl.getDay()];
+
+  const total =
+    tgl.getDate() +
+    (tgl.getMonth()+1) +
+    tgl.getFullYear();
+
+  const weton = wetonList[total % 5];
+
+  const unsur = unsurList[total % 4];
+
+  const karir = karirList[total % karirList.length];
+
+  const uang = uangList[total % uangList.length];
+
+  let sifat = "";
+
+  if(total % 2 === 0){
+    sifat =
+    "Kamu memiliki aura positif, mudah disukai dan punya semangat besar untuk berkembang.";
+  }else{
+    sifat =
+    "Kamu dikenal intuitif, tenang, dan memiliki pemikiran yang dalam.";
+  }
+
+  document.getElementById("hari").innerHTML =
+    "Hari lahirmu adalah <b>" + hari + "</b>";
+
+  document.getElementById("weton").innerHTML =
+    "Weton kelahiranmu adalah <b>" + weton + "</b>";
+
+  document.getElementById("unsur").innerHTML =
+    "<b>" + unsur.nama + "</b> — " + unsur.sifat;
+
+  document.getElementById("karir").innerHTML =
+    karir;
+
+  document.getElementById("keuangan").innerHTML =
+    uang;
+
+  document.getElementById("sifat").innerHTML =
+    sifat;
+
+  document.getElementById("hasil").style.display = "block";
+
 }
 
-const tgl=new Date(input);
+function getResultText(){
 
-const hari=hariList[tgl.getDay()];
+  return `
+✨ HASIL PRIMBON SAYA ✨
 
-const total=
-tgl.getDate()+
-(tgl.getMonth()+1)+
-tgl.getFullYear();
+📅 ${document.getElementById("hari").innerText}
 
-const weton=wetonList[total%5];
+🌙 ${document.getElementById("weton").innerText}
 
-const unsur=unsurList[total%4];
+🔥 ${document.getElementById("unsur").innerText}
 
-const karir=
-karirList[total%karirList.length];
+💼 ${document.getElementById("karir").innerText}
 
-const uang=
-uangList[total%uangList.length];
+💰 ${document.getElementById("keuangan").innerText}
 
-let sifat="";
+✨ ${document.getElementById("sifat").innerText}
 
-if(total%2==0){
-sifat=
-"Memiliki aura positif dan semangat tinggi.";
-}else{
-sifat=
-"Tenang, intuitif dan pemikir mendalam.";
-}
-
-document.getElementById("hasilPrimbon").innerHTML=`
-
-<div class="box">
-<h3>📅 Hari Lahir</h3>
-<p>${hari}</p>
-</div>
-
-<div class="box">
-<h3>🌙 Weton</h3>
-<p>${weton}</p>
-</div>
-
-<div class="box">
-<h3>🔥 Unsur Alam</h3>
-<p>${unsur.nama} — ${unsur.sifat}</p>
-</div>
-
-<div class="box">
-<h3>💼 Karier</h3>
-<p>${karir}</p>
-</div>
-
-<div class="box">
-<h3>💰 Nasihat Keuangan</h3>
-<p>${uang}</p>
-</div>
-
-<div class="box">
-<h3>✨ Kepribadian</h3>
-<p>${sifat}</p>
-</div>
-
-<button class="share-btn"
-onclick="sharePrimbon()">
-📲 Bagikan Hasil
-</button>
-
+🔮 Dibuat di Primbon Nusantara
 `;
 
 }
 
-function sharePrimbon(){
+function shareResult(){
 
-const text=
-document.getElementById("hasilPrimbon").innerText;
+  const text = getResultText();
 
-if(navigator.share){
+  if(navigator.share){
 
-navigator.share({
-title:"Primbon Weton",
-text:text
-});
+    navigator.share({
+      title:"Primbon Nusantara",
+      text:text
+    });
 
-}else{
+  }else{
 
-navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(text);
 
-alert("Hasil berhasil disalin");
+    alert("Hasil berhasil disalin!");
 
+  }
 }
 
+function copyResult(){
+
+  const text = getResultText();
+
+  navigator.clipboard.writeText(text);
+
+  alert("Hasil primbon berhasil dicopy!");
 }
+
 </script>
 
 </body>
